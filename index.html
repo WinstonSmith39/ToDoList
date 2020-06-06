@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1) ADD ELEMENTS TO HTML -->
+    <ul class="myList">
+
+    </ul>
+
+    <form class="myForm">
+        <input type="text"></input>
+        <input type="submit"></input>
+    </form>
+
+    <script>
+        // 2) IDENTIFY AND STORE ELEMENTS IN JAVASCRIPT VARIABLES
+        // identify our form and list in html and save it in a variable
+        const form = document.querySelector('.myForm');
+        const list = document.querySelector('.myList');
+
+        // 3) ADD LISTENER FOR FORM SUBMISSION AND EXECUTE OUR FUNCTION
+        // Add event listener of type "submit" to our form
+        // When this listener notices that form "submits", 
+        // execute our function called functionToExecuteWhenFormSubmits
+        // aka, link our form submit to a function
+        form.addEventListener('submit', functionToExecuteWhenFormSubmits);
+
+        // 4) FORM IS SUBMITTED, NOW OUR FUNCTION EXECUTES
+        function functionToExecuteWhenFormSubmits(event) {
+            // PREVENT PAGE FROM REFRESHING (a method function provided by browser/event)
+            event.preventDefault();
+
+            // Extract our input value from event
+            const taskFromInput = event.target[0].value;
+
+            // create a list element to be added to our page
+            const listItem = document.createElement('li');
+            //add our extracted value to this new element we made
+            listItem.innerHTML = taskFromInput;
+            //add it to our page list
+            list.appendChild(listItem);
+        }
+
+    </script>
+</body>
+
+</html>
