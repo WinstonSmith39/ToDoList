@@ -1,7 +1,7 @@
 
 // 2) IDENTIFY AND STORE ELEMENTS IN JAVASCRIPT VARIABLES
 // identify our form and list in html and save it in a variable
-const form = document.querySelector('.myForm');
+const form = document.querySelector('.myToDoForm'); // . for class="" and # for id=""
 const list = document.querySelector('.myList');
 
 // 3) ADD LISTENER FOR FORM SUBMISSION AND EXECUTE OUR FUNCTION
