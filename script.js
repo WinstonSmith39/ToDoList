@@ -36,6 +36,11 @@ function functionToExecuteWhenFormSubmits(event) {
 function listClickEvent(event) {
     const listItemToDelete = event.target;
 
-    listItemToDelete.style.textDecoration = 'line-through'
+    if (listItemToDelete.style.textDecoration === 'line-through') {
+        listItemToDelete.style.textDecoration = ''
+    }
+    else {
+        listItemToDelete.style.textDecoration = 'line-through'
+    }
 }
 
