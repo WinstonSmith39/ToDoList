@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('buttonList', document.querySelectorAll('button'))
+        // STEP1 event listeners 
+        // const buttonList = document.querySelector(button);
+        // button.addEventListener('click', onButtonClick)
+        function onButtonClick(event) {
+            const userChoice = event.target.name;
+
+            const computerChoice = generateRandomComputerChoice();
+
+            checkWhoWon(userChoice, computerChoice)
+        }
+
+        function checkWhoWon(a, b) {
+
+        }
+
+        function generateRandomComputerChoice() {
+            // return between 0 and 2 (Math.random)
+        }
+    </script>
+</head>
+
+<body>
+    <p>You win!</p>
+    <p>Computer picked paper</p>
+    <!-- 0 -->
+    <button name="0">Rock</button>
+    <!-- 1 -->
+    <button name="1">Paper</button>
+    <!-- 2 -->
+    <button name="2">Scissors</button>
+</body>
+
+</html>
